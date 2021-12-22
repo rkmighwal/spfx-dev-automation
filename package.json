@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "test": "set NODE_NO_HTTP2=1 && gulp serve --nobrowser",
+    "test-browser": "set NODE_NO_HTTP2=1 && gulp serve",
+    "pack-revision": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./deploymentScripts/package_revision.ps1",
+    "pack-patch": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./deploymentScripts/package_patch.ps1",
+    "pack-minor": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./deploymentScripts/package_minor.ps1",
+    "pack-major": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./deploymentScripts/package_major.ps1",
+    "deploy": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./deploymentScripts/deployment.ps1",
+  }
+}
